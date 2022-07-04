@@ -1,0 +1,5 @@
+.field > label {
+  width: 60px;
+  display: inline-block;
+  margin-bottom: 16px;
+}

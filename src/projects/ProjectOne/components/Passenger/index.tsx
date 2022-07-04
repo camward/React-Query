@@ -23,7 +23,7 @@ function Passenger() {
   };
 
   const { data, error, isLoading } = useQuery(["passenger", id], () =>
-    fetchPassenger(id)
+    id ? fetchPassenger(id) : null
   );
 
   return (

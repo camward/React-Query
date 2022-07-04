@@ -1,0 +1,14 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigate {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.page {
+  margin: 0 8px;
+}

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useMutation } from "react-query";
 import { useFormik } from "formik";
+import "./style.css";
 
 function AddPassenger() {
   const formik = useFormik({
@@ -31,26 +32,21 @@ function AddPassenger() {
     <div>
       <h4>Добавить запись</h4>
       <form onSubmit={formik.handleSubmit}>
-        <p>
-          <label>
-            Name
-            <input id="name" type="text" onChange={formik.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Trips
-            <input id="trips" type="number" onChange={formik.handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Airline
-            <input id="airline" type="number" onChange={formik.handleChange} />
-          </label>
-        </p>
-
-        <button type="submit">Добавить</button>
+        <div className="field">
+          <label htmlFor="name">Name</label>
+          <input id="name" type="text" onChange={formik.handleChange} />
+        </div>
+        <div className="field">
+          <label htmlFor="trips">Trips</label>
+          <input id="trips" type="number" onChange={formik.handleChange} />
+        </div>
+        <div className="field">
+          <label htmlFor="airline">Airline</label>
+          <input id="airline" type="number" onChange={formik.handleChange} />
+        </div>
+        <div className="field">
+          <button type="submit">Добавить</button>
+        </div>
       </form>
 
       {mutation.isLoading && <p>Загрузка...</p>}

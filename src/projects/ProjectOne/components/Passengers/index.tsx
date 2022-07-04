@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
+import "./style.css";
 
 function Passengers() {
   const [page, setPage] = useState(0);
@@ -19,16 +20,14 @@ function Passengers() {
 
   return (
     <div>
-      <div>
+      <div className="navigate">
         <button onClick={() => setPage((old) => Math.max(0, old - 1))}>
           Назад
         </button>
-        &nbsp; {page + 1} &nbsp;
+        <div className="page">{page + 1}</div>
         <button onClick={() => setPage((old) => old + 1)}>Вперед</button>
-        <br />
-        <br />
       </div>
-      <ul>
+      <ul className="list">
         {isSuccess &&
           data.data.map((item: any) => (
             <React.Fragment key={item._id}>
