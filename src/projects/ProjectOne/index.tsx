@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import Passenger from "./components/Passenger";
 import Passengers from "./components/Passengers";
+import AddPassenger from "./components/AddPassenger";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -19,6 +20,7 @@ const ProjectOne = () => {
       <QueryClientProvider client={queryClient}>
         <Passengers />
         <Passenger />
+        <AddPassenger />
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </div>
