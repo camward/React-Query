@@ -35,6 +35,22 @@ export default function Characters() {
       {data.results.map((character: any) => (
         <Character character={character} key={character.id} />
       ))}
+      <div className="pagination">
+        <button
+          className="button"
+          onClick={() => setPage((old) => Math.max(old - 1, 1))}
+          disabled={page === 1}
+        >
+          Previous
+        </button>
+        <button
+          className="button"
+          onClick={() => setPage((old) => old + 1)}
+          disabled={!data.info.next}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
