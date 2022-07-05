@@ -1,6 +1,8 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import Characters from "./components/Characters";
+import "./style.css";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -17,9 +19,10 @@ const queryClient = new QueryClient({
 
 const ProjectTwo = () => {
   return (
-    <div>
-      <h3>Project Two</h3>
+    <div className="container">
+      <h3>Project Two: Rick and Morty</h3>
       <QueryClientProvider client={queryClient}>
+        <Characters />
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </div>
