@@ -16,7 +16,7 @@ const queryClient = new QueryClient({
 const ProjectOne = () => {
   return (
     <div>
-      <h3>Project One</h3>
+      <h3>Project One: Instantwebtools.net</h3>
       <QueryClientProvider client={queryClient}>
         <Passengers />
         <Passenger />

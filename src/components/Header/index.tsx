@@ -14,19 +14,13 @@ const Header = () => {
         to="/one"
         className={({ isActive }) => (isActive ? "active" : undefined)}
       >
-        One
+        Project One
       </NavLink>
       <NavLink
         to="/two"
         className={({ isActive }) => (isActive ? "active" : undefined)}
       >
-        Two
-      </NavLink>
-      <NavLink
-        to="/three"
-        className={({ isActive }) => (isActive ? "active" : undefined)}
-      >
-        Three
+        Project Two
       </NavLink>
     </div>
   );

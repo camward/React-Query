@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import ProjectOne from "./projects/ProjectOne";
 import ProjectTwo from "./projects/ProjectTwo";
-import ProjectThree from "./projects/ProjectThree";
 import "./App.css";
 
 const App = () => {
@@ -19,7 +18,6 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="one" element={<ProjectOne />} />
             <Route path="two" element={<ProjectTwo />} />
-            <Route path="three" element={<ProjectThree />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </div>
